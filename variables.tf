@@ -156,3 +156,15 @@ variable "task_mount_points" {
   type        = list(object({ sourceVolume = string, containerPath = string, readOnly = bool }))
   default     = null
 }
+
+variable "operating_system_family" {
+  description = "The operating system family for the task."
+  default     = "LINUX"
+  type        = string
+}
+
+variable "cpu_architecture" {
+  description = "cpu architecture for the task"
+  default     = "X86_64"
+  type        = string
+}
